@@ -20,10 +20,7 @@
        
         
         
-        <div class="form-group">
-            {{ Form::label('phone', 'Phone') }}
-            {{ Form::text('phone', null, array('class' => 'form-control')) }}
-        </div>
+        
 
         {{ Form::submit('Proceed to Payment', array('class' => 'button success')) }}
         {!! Form::close() !!}

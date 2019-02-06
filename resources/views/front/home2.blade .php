@@ -12,29 +12,28 @@
 
 
 
-<div class="w3-content w3-display-container " style="max-width:2000px" >
+<div class="w3-content w3-display-container" style="max-width:1500px">
 
 <div class="w3-display-container mySlides">
-  <img src="images/img_fjords.jpg" style="width:100%;height:400px;">
+  <img src="images/img_fjords.jpg" style="width:100%">
    <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
     <a href="{{url('pall')}}">Check out Our Products</a>
   </div>
 </div>
 
 <div class="w3-display-container mySlides">
-  <img src="images/img_lights.jpg" style="width:100%;height:400px;">
+  <img src="images/img_lights.jpg" style="width:100%">
    <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
     <a href="{{url('pall')}}">Check out Our Products</a>
   </div>
 </div>
 
 <div class="w3-display-container mySlides">
-  <img src="images/img_mountains.jpg" style="width:100%;height:400px;">
+  <img src="images/img_mountains.jpg" style="width:100%">
    <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
    <a href="{{url('pall')}}">Check out Our Products</a>
   </div>
 </div>
-
 
 
 </div>

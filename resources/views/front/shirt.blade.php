@@ -29,13 +29,47 @@
                                 Select Size
                                 <select>
                                     <option value="small">
-                                        Small
+                                        M
                                     </option>
                                     <option value="medium">
-                                        Medium
+                                        L
                                     </option>
                                     <option value="large">
-                                        Large
+                                        XL
+                                    </option>
+
+                                     <option value="small">
+                                        XLL
+                                    </option>
+                                    <option value="pmedium">
+                                        28
+                                    </option>
+                                    <option value="plarge">
+                                        30
+                                    </option>
+                                     <option value="psmall">
+                                        32
+                                    </option>
+                                    <option value="pdouble medium">
+                                        34
+                                    </option>
+                                    <option value="p extra large">
+                                        36
+                                    </option>
+                                     <option value="punmedium">
+                                        38
+                                    </option>
+                                    <option value="semi pun large">
+                                        40
+                                    </option>
+                                     <option value="large pun ">
+                                        42
+                                    </option>
+                                    <option value="extra pun">
+                                        44
+                                    </option>
+                                    <option value="pun do large">
+                                        46
                                     </option>
                                    
                                 </select>

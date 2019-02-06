@@ -40,7 +40,7 @@ class AddressController extends Controller
          $this->validate($request,[
             'address'=>'required',
             'city'=>'required',
-            'phone'=>'required'
+            
         ]);
         Auth::user()->address()->create($request->all());
         return redirect()->route('checkout.payment');

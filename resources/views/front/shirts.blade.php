@@ -32,7 +32,8 @@
                 </div>
             </div>
             @empty
-            <h2>not available now</h2>
+
+            <h2 id="myHeader">not available now</h2>
             @endforelse
            
             </div>

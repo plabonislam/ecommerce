@@ -21,7 +21,7 @@
 
     	<div class="form-group">
     		{{Form::label('size','Size')}}
-    		{{Form::select('size',['small'=>'Small','medium'=>'Medium','large'=>'Large'],null,
+    		{{Form::select('size',['small'=>'m','medium'=>'L','large'=>'XL','extra large'=>'xxl','pentsmall'=>'28','pentmedium'=>'30','pentsemi'=>'32','pentdouble'=>'34','pentdouble standard'=>'34','ultimate double'=>'36','punmedium'=>'38','punjsemi'=>'40','punjdouble'=>'42','punjdouble standard'=>'44','ultimate double'=>'46','heig-ultimate double'=>'48'],null,
     		['class'=>'form-control'])}}
     
   </div>

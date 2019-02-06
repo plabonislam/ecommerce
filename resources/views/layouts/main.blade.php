@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{asset('dist/css/foundation.css')}}"/>
     <link rel="stylesheet" href="{{asset('dist/css/app.css')}}"/>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 <body>
@@ -24,8 +24,8 @@
         <div style="color:white" class="top-bar-left">
             <h4 class="brand-title">
                 <a href="{{route('home')}}">
-                    <i class="fa fa-home fa-lg" aria-hidden="true">
-                    </i>
+                   
+                  
                     Rangpur-Hut
                 </a>
             </h4>
@@ -56,7 +56,7 @@
     </div>
 
 
-</div>
+
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
   <a class="navbar-brand" href="#"></a>
@@ -74,13 +74,13 @@
         Menz Collection
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="{{route('tshirts')}}">Tshirt</a>
+        <a class="dropdown-item" href="{{route('tshirts')}}">shirt</a>
         <a class="dropdown-item" href="{{route('punjabi')}}">Punjabi</a>
-        <a class="dropdown-item" href="{{route('shirts')}}">shirt</a>
+        <a class="dropdown-item" href="{{route('shirts')}}">Tshirt</a>
          <a class="dropdown-item" href="{{route('Pent')}}">Pant</a>
          <a class="dropdown-item" href="{{route('other')}}">Other</a>
 
-         <a class="dropdown-item" href="{{route('all')}}">ALL Men</a>
+         <a class="dropdown-item" href="{{route('all')}}">ALL Collection of Men</a>
       </div>
     </li>
 
@@ -97,20 +97,47 @@
     </li>
     @if(!Auth::check())
 
-<li class="nav-item">
-      <a class="nav-link" href="{{route('login')}}">log in</a>
-    </li>
+<li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    Sign Up <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    
+                                   <a class="dropdown-item" href="{{route('login')}}">Login</a>
+                            <a class="dropdown-item" href="{{route('register')}}">Regester</a>
+
+                                </div>
+</li>
+   
    @endif 
     @if(Auth::check())
 
-<li class="nav-item">
-      <a class="nav-link" href="{{route('logout')}}">log out</a>
-    </li>
+<li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
    @endif
 
   </ul>
 </nav>
+
+
 @yield('content')
+
 
 <footer class="footer">
 
@@ -121,10 +148,11 @@
   </div>
   <div class="small-12 medium-4 large-4 columns">
       <i class="fi-html5"></i>
-      <h2>contact</h2>
-      <h4>phone 01780722970</h4>
-      <h4>email zim.csbrur@gmail.com</h4>
-      <p></p>
+     
+      <ul class="footer-links">
+  
+        
+        </ul>
   </div>
 
   <div class="small-6 medium-4 large-4 columns">
@@ -132,11 +160,29 @@
       <ul class="footer-links">
 
         <li> <h5><a href="https://m.facebook.com/rangpurhut/">Facebook</a></h5></li>
-        
-        <ul>
+        <p>contact 01784982600</p>
+        </ul>
         </div>
     </div>
 </footer>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+</script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
